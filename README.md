@@ -46,9 +46,9 @@
     <br />
     <a href="#">View Demo</a>
     ·
-    <a href="https://github.com/Bimbalacom/Desktop/issues/new?assignees=&labels=bug&template=bug_report.md&title=">Report Bug</a>
+    <a href="https://github.com/Bimbalacom/Mobile/issues/new?assignees=&labels=bug&template=bug_report.md&title=">Report Bug</a>
     ·
-    <a href="https://github.com/Bimbalacom/Desktop/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=">Request Feature</a>
+    <a href="https://github.com/Bimbalacom/Mobile/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=">Request Feature</a>
   </p>
 </p>
 
@@ -96,9 +96,9 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 <!-- RELEASE PLAN OF THE WEBSITE-->
-## Release plan of the website
+## Release plan
 
-- There isn't an official plan for now. We will keep an eye on everything and update it as much as possible.
+- Depending on the feature requests.
 
 <!-- LICENSE -->
 ## License
