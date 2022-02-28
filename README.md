@@ -127,7 +127,7 @@ Our Discord - [@bimbala](https://bimbala.com/discord)
 [issues-shield]: https://img.shields.io/github/issues/Bimbalacom/Mobile.svg?style=flat-square
 [issues-url]: https://github.com/Bimbalacom/Mobile/issues
 [license-shield]: https://img.shields.io/github/license/Bimbalacom/Mobile.svg?style=flat-square
-[license-url]: https://github.com/Bimbalacom/Mobile/blob/master/LICENSE.txt
+[license-url]: https://github.com/Bimbalacom/Mobile/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/company/bimbala/
 [product-screenshot]: .github/img/demo.png
