@@ -1,4 +1,4 @@
-package com.example.webview_part2
+package com.com.bimbala.mobile
 
 import io.flutter.embedding.android.FlutterActivity
 
