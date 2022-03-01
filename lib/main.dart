@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                   image: DecorationImage(
                     //fit: BoxFit.fill,
                     image: AssetImage(
-                      'assetss/500x500.png',
+                      'assets/500x500.png',
                     ),
                   ),
                 ),
