@@ -1,4 +1,4 @@
-package com.com.bimbala.mobile
+package com.bimbala.mobile
 
 import io.flutter.embedding.android.FlutterActivity
 
