@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             const Text(
-              "Sub-Domain = Username",
+              "Your SubDomain is your username:",
               style: TextStyle(
                 color: Colors.white,
               ),
@@ -165,88 +165,7 @@ class _WebViewExampleState extends State<WebViewExample> {
             );
           },
         ),
-        drawer: Drawer(
-          backgroundColor: Colors.blue[100],
-          child: ListView(
-            children: [
-              const Padding(
-                padding: EdgeInsets.only(top: 18.0),
-                child: Align(
-                  alignment: Alignment.center,
-                  child: SizedBox(
-                    height: 60,
-                    child: Text(
-                      'WorkSpaces',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              const ListTile(
-                leading: CircleAvatar(
-                  backgroundImage: NetworkImage(
-                    "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi1.hdslb.com%2Fbfs%2Farchive%2F6677bf4a4697e30396ce925affdc2a73e476e402.jpg&f=1&nofb=1",
-                  ),
-                ),
-                title: Text(
-                  "Another Page!",
-                  style: TextStyle(
-                    fontSize: 20,
-                  ),
-                ),
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: const <Widget>[
-                  Divider(),
-                  ListTile(
-                    leading: Icon(Icons.settings),
-                    title: Text('Add Workspace'),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.help),
-                    title: Text('Help'),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-        bottomNavigationBar: Container(
-          height: 60,
-          decoration: BoxDecoration(
-            color: Theme.of(context).primaryColor,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              PopupMenuButton(
-                icon: const Icon(
-                  Icons.menu_outlined,
-                  color: Colors.white,
-                ),
-                onSelected: (result) {
-                  if (result == 0) {
-                    _scaffoldKey.currentState!.openDrawer();
-                  }
-                },
-                itemBuilder: (BuildContext context) {
-                  return [
-                    const PopupMenuItem(
-                      value: 0,
-                      child: Text('Favorites'),
-                    ),
-                  ];
-                },
-              ),
-            ],
-          ),
-        ),
-      ),
+     ),
     );
   }
 }
