@@ -1,7 +1,9 @@
 dev_dependencies:
-  flutter_launcher_icons: "^0.9.2"
+  flutter_launcher_icons: "^0.10.0"
 
 flutter_icons:
-  android: true
+  android: "launcher_icon"
   ios: true
-  image_path: "assets/500x500.png"
+  image_path: "assets/logo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  
