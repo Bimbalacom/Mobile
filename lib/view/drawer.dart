@@ -142,13 +142,13 @@ class _DrawerGState extends State<DrawerG> {
                 GestureDetector(
                   onTap: () => addToFavorite(),
                   child: const ListTile(
-                    title: Text('Add to favorite'),
+                    title: Text('Add this domain to favourite'),
                   ),
                 ),
                 GestureDetector(
                   onTap: () => addNewFavorite(),
                   child: const ListTile(
-                    title: Text('Add a workspace'),
+                    title: Text('Open a new domain'),
                   ),
                 ),
               ],

@@ -36,7 +36,11 @@ class _StartScreenState extends State<StartScreen> {
             ),
             //~Title
             const SizedBox(height: 20),
-            const Text('TITLE'),
+            const Text('Specify your Bimbala domain:',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                )),
             const SizedBox(height: 20),
             //~Input
             Row(
@@ -68,7 +72,7 @@ class _StartScreenState extends State<StartScreen> {
                         ),
                       ),
                       label: Text(
-                        'Username',
+                        'Domain',
                         style: TextStyle(
                           color: white,
                         ),
@@ -90,7 +94,7 @@ class _StartScreenState extends State<StartScreen> {
                       return Row(
                         children: [
                           Text(
-                            'Last Place:',
+                            'Last visited:',
                             style: TextStyle(color: white),
                           ),
                           TextButton(
@@ -127,7 +131,7 @@ class _StartScreenState extends State<StartScreen> {
       );
     } else {
       const snackBar = SnackBar(
-        content: Text('Empty Field'),
+        content: Text('Please enter a domain'),
       );
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
