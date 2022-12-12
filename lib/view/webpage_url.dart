@@ -1,25 +1,32 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:bimbala/view/drawer.dart';
+import 'package:bimbala/view/start_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 // WebViewController? _webViewController;
 WebViewController? controllerGlobal;
 
-class WebViewScreen extends StatefulWidget {
-  const WebViewScreen({
+/*
+
+This component was created to open a full URL page
+with the ability to go back to StartScreen without relying
+on a user dashboard name.
+
+*/
+class WebViewUrlScreen extends StatefulWidget {
+  const WebViewUrlScreen({
     Key? key,
-    required this.user,
+    required this.url,
   }) : super(key: key);
 
-  final String user;
+  final String url;
 
   @override
-  State<WebViewScreen> createState() => _WebViewScreenState();
+  State<WebViewUrlScreen> createState() => _WebViewUrlScreenState();
 }
 
-class _WebViewScreenState extends State<WebViewScreen> {
+class _WebViewUrlScreenState extends State<WebViewUrlScreen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final Completer<WebViewController> _controllerCompleter =
       Completer<WebViewController>();
@@ -48,10 +55,6 @@ class _WebViewScreenState extends State<WebViewScreen> {
       child: Scaffold(
         key: _scaffoldKey,
 
-        //~ Drawer
-        drawerEnableOpenDragGesture: false,
-        drawer: DrawerG(user: widget.user),
-
         // ~ WebView
         extendBodyBehindAppBar: true,
         body: SafeArea(
@@ -59,7 +62,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             child: WebView(
-              initialUrl: 'https://${widget.user}.bimbala.com/',
+              initialUrl: widget.url,
               // initialUrl: 'https://bimbala.com/',
               javascriptMode: JavascriptMode.unrestricted,
               onWebViewCreated: (WebViewController webViewController) {
@@ -77,26 +80,35 @@ class _WebViewScreenState extends State<WebViewScreen> {
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.only(left: 10),
-              child: Text('Current place: ${widget.user}'),
+              child: Text('Current place: ${widget.url}'),
             ),
             IconButton(
               onPressed: () {},
               icon: PopupMenuButton(
                 onSelected: (item) {
                   if (item == 1) {
-                    _scaffoldKey.currentState?.openDrawer();
+                    openHomeScreen();
                   }
                 },
                 itemBuilder: (BuildContext context) => <PopupMenuItem>[
                   const PopupMenuItem(
                     value: 1,
-                    child: Text('See favorites'),
+                    child: Text('Back to Home'),
                   ),
                 ],
               ),
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  void openHomeScreen() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (BuildContext context) => StartScreen(),
       ),
     );
   }
