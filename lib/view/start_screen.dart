@@ -1,5 +1,6 @@
 import 'package:bimbala/logic/favorites_controller.dart';
 import 'package:bimbala/view/webpage.dart';
+import 'package:bimbala/view/webpage_url.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
@@ -28,6 +29,7 @@ class _StartScreenState extends State<StartScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Spacer(),
             //~ Logo
             const CircleAvatar(
               radius: 70,
@@ -112,6 +114,39 @@ class _StartScreenState extends State<StartScreen> {
                 ),
               ],
             ),
+            const Spacer(),
+            SizedBox(
+                width: MediaQuery.of(context).size.width * 0.8,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                        child: OutlinedButton(
+                            style: ButtonStyle(
+                                side: MaterialStateProperty.all(BorderSide(
+                              color: white,
+                            ))),
+                            onPressed: () => goToView('board'),
+                            child: Text("Bimbala's Board",
+                                style: TextStyle(
+                                  color: white,
+                                )))),
+                    const SizedBox(width: 20),
+                    Expanded(
+                      child: OutlinedButton(
+                          style: ButtonStyle(
+                              side: MaterialStateProperty.all(BorderSide(
+                            color: white,
+                          ))),
+                          onPressed: () => openBimbalaUrl(),
+                          child: Text("Website",
+                              style: TextStyle(
+                                color: white,
+                              ))),
+                    ),
+                  ],
+                )),
+            const SizedBox(height: 20),
           ],
         ),
       ),
@@ -135,6 +170,17 @@ class _StartScreenState extends State<StartScreen> {
       );
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
     }
+  }
+
+  void openBimbalaUrl() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (BuildContext context) => const WebViewUrlScreen(
+          url: 'https://bimbala.com/',
+        ),
+      ),
+    );
   }
 
   @override
