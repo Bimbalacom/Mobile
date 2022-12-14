@@ -127,7 +127,7 @@ class _StartScreenState extends State<StartScreen> {
                               color: white,
                             ))),
                             onPressed: () => goToView('board'),
-                            child: Text("Bimbalas Board",
+                            child: Text("Bimbala's Board",
                                 style: TextStyle(
                                   color: white,
                                 )))),
