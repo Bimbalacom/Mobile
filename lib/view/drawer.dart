@@ -112,7 +112,7 @@ class _DrawerGState extends State<DrawerG> {
                             leading: CircleAvatar(
                               backgroundColor: white,
                               foregroundImage: NetworkImage(
-                                  'https://${widget.user}.bimbala.com/favicon.ico'),
+                                  'https://${snapshot.data[index]}.bimbala.com/favicon.ico'),
                             ),
                             title: Text(
                               snapshot.data[index].toString(),
